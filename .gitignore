@@ -4,5 +4,5 @@ node_modules/
 .omc/
 archive/
 mockup/webroot/
-themes/noiz-dark/ispconfig_version
-themes/noiz-dark/ISPC_VERSION
+themes/clarity/ispconfig_version
+themes/clarity/ISPC_VERSION
