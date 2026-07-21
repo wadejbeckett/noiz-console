@@ -35,10 +35,10 @@
   <link rel='stylesheet' href='../themes/default/assets/stylesheets/font-awesome-4.7.0/css/font-awesome.min.css' />
 
   <!-- Clarity Theme for ISPConfig layer -->
-  <link rel='stylesheet' href='../themes/<tmpl_var name='current_theme'>/assets/fonts/inter/inter.css?ver=4' />
-  <link rel='stylesheet' href='../themes/<tmpl_var name='current_theme'>/assets/stylesheets/clarity/tokens.css?ver=4' />
-  <link rel='stylesheet' href='../themes/<tmpl_var name='current_theme'>/assets/stylesheets/clarity/icons.css?ver=4' />
-  <link rel='stylesheet' href='../themes/<tmpl_var name='current_theme'>/assets/stylesheets/clarity/login.css?ver=4' />
+  <link rel='stylesheet' href='../themes/<tmpl_var name='current_theme'>/assets/fonts/inter/inter.css?ver=8' />
+  <link rel='stylesheet' href='../themes/<tmpl_var name='current_theme'>/assets/stylesheets/clarity/tokens.css?ver=8' />
+  <link rel='stylesheet' href='../themes/<tmpl_var name='current_theme'>/assets/stylesheets/clarity/icons.css?ver=8' />
+  <link rel='stylesheet' href='../themes/<tmpl_var name='current_theme'>/assets/stylesheets/clarity/login.css?ver=8' />
 
   <!-- host branding overrides, read from ISPConfig's sys_ini (logo/accent/login).
        Absolute path so it resolves from /login/; empty no-op when nothing is set. -->
@@ -47,10 +47,12 @@
 
 <body class='nz-login'>
   <div class='nzl-scene'>
+    <!-- v2.2: the wordmark stands above the card, in the horizon light.
+         .nzl-brand img stays the brand.php logo-override target. -->
+    <div class='nzl-brand'>
+      <img src='../themes/<tmpl_var name='current_theme'>/assets/images/wordmark-white.svg' alt='ISPConfig' width='122' height='40'>
+    </div>
     <main class='nzl-card' aria-label='Sign in'>
-      <div class='nzl-brand'>
-        <img src='../themes/<tmpl_var name='current_theme'>/assets/images/wordmark-white.svg' alt='ISPConfig' width='122' height='40'>
-      </div>
       <p class='nzl-hint'>Sign in to your control panel</p>
       <tmpl_dyninclude name="content_tpl">
       <div class='nzl-custom'><small><tmpl_var name="custom_login"></small></div>
